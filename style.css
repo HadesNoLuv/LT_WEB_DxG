@@ -99,8 +99,24 @@ header:hover {
     padding: 0 12px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
+.others > li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #ccc;
+    position: absolute;
+    right:0  ;
+    top: 50%;
+    transform:  translateY(-50%);
+ 
+}
+.others > li:last-child::after{
+    display: none;
+}
 .others >li:first-child input {
     width: 100%;
     border:none;
@@ -186,7 +202,7 @@ header:hover {
 
 }
 .app-google img {
-    height: 40px;
+    height: 50px;
     margin: 4px;
     cursor: pointer;
 }
@@ -223,7 +239,7 @@ footer{
     
 
 }
-.footer-top{
+.footer-items{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -232,16 +248,16 @@ footer{
     height: 70px;
 }
 
-.footer-top img {
+.footer-items img {
     height: 50px;
 }
 
-.footer-top li {
+.footer-items li {
     padding: 0 12px;
     position: relative;
 }
 
-.footer-top li::after {
+.footer-items li::after {
    content: "";
    display: block;
    width: 1px;
@@ -254,17 +270,17 @@ footer{
 
 }
 
-.footer-top li:last-child::after{
+.footer-items li:last-child::after{
     display: none;
     
 }
 
-.footer-top li:last-child a {
+.footer-items li:last-child a {
     margin-right: 12px;
     color: #333;
 }
 
-.footer-center{
+.footer-text{
     text-align: center;
 
 
